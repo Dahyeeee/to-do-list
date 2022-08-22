@@ -47,11 +47,8 @@ export const todoSlice = createSlice({
       state.toDos = state.toDos
         .map((todo) => {
           if (todo.id === action.payload.id) {
-            if (todo.isImportant === 100) {
-              todo.isImportant = state.importance++;
-            } else {
-              todo.isImportant = 100;
-            }
+            todo.isImportant =
+              todo.isImportant === 100 ? state.importance++ : 100;
           }
           return todo;
         })
