@@ -62,7 +62,7 @@ function ToDo({ toDo }) {
       <button
         className="btn"
         onClick={() => dispatch(markDone({ id: id }))}
-        disabled={isEditing ? true : false}
+        disabled={isEditing}
       >
         <MdCheckBox />
       </button>
